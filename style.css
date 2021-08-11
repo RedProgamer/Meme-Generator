@@ -122,3 +122,28 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
+.loading {
+    display: none;
+}
+
+/* Mobile Design */
+@media only screen and (max-width: 450px) {
+    .meme {
+        width: 400px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .meme {
+        width: 350px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .meme {
+        width: 300px;
+        height: auto;
+    }
+}
