@@ -21,7 +21,6 @@ body {
     text-align: center;
 }
 
-
 .meme {
     border: 5px solid #fff;
     display: none;
@@ -29,10 +28,25 @@ body {
     height: 480px;
 }
 
+
+/* Zoom Effect */
+input[type=checkbox] {
+    display: none;
+}
+  
+.memes img {
+    transition: transform 0.25s ease-in-out;
+    cursor: zoom-in;
+}
+  
+input[type=checkbox]:checked ~ label > img {
+    transform: scale(2);
+    cursor: zoom-out;
+}
+
 form {
     margin-top: 30px;
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
 }
@@ -42,14 +56,6 @@ p {
     margin-right: 5px;
 }
 
-/* Toggle Button */
-/* .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-   */
 .switch {
     position: relative;
     display: inline-block;
@@ -75,17 +81,6 @@ p {
     transition: .4s;
 }   
   
-/* .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-} */
 .slider:before {
     position: absolute;
     content: "";
@@ -113,7 +108,6 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
   
-  /* Rounded sliders */
 .slider.round {
     border-radius: 34px;
 }

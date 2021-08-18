@@ -4,7 +4,7 @@ const memeImg = document.querySelector('.meme');
 const sourceMeme = document.querySelector('.source');
 const loading = document.querySelector('.loading');
 
-let nonNSFWmemes = ['memes', 'wholesomememes', 'dankmemes', 'animememes', 'terriblefacebookmemes', 'IndianDankMemes'];
+let nonNSFWmemes = ['memes', 'wholesomememes', 'dankmemes', 'animememes', ,'ProgrammerHumor', 'IndianDankMemes', 'terriblefacebookmemes'];
 let NSFWmemes = ['Hentaimemes','NSFWMemes', 'Memes_Of_The_Dank'];
 
 async function getMemes(type) {
@@ -32,6 +32,11 @@ function showImg(img) {
 
     sourceMeme.style.display = 'block';
     sourceMeme.setAttribute('href', img.postLink);
-}   
+};
+
+function openSource() {
+    window.open(sourceMeme.href, '_blank');
+}
 
 generatorBtn.addEventListener('click', operate);
+sourceMeme.addEventListener('click', openSource);
