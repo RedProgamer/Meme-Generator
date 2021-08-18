@@ -5,7 +5,7 @@ const sourceMeme = document.querySelector('.source');
 const loading = document.querySelector('.loading');
 
 let nonNSFWmemes = ['memes', 'wholesomememes', 'dankmemes', 'animememes', ,'ProgrammerHumor', 'IndianDankMemes', 'terriblefacebookmemes'];
-let NSFWmemes = ['Hentaimemes','NSFWMemes', 'Memes_Of_The_Dank'];
+let NSFWmemes = ['hentaimemes','NSFWMemes', 'PornMemes', 'Memes_Of_The_Dank'];
 
 async function getMemes(type) {
     const result = await fetch(`https://meme-api.herokuapp.com/gimme/${type}`);
